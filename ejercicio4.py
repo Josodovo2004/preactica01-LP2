@@ -22,6 +22,12 @@ def mostrar_tareas():
     for tarea in tareas:
         print(f"Descripcion: {tarea[1]}, estado: {tarea[2]}")
 
+def marcar_completado():
+    id_completado = int(input("Ingrese la tarea que desea marcar como completada: "))
+    for i in range(len(tareas)):
+        if tareas[i][0] == id_completado:
+            tareas[i][2] == "Completado" 
+    
 
 def main():
     while True:
@@ -34,7 +40,7 @@ def main():
         elif eleccion == 3:
             mostrar_tareas()
         elif eleccion == 4:
-            break
+            marcar_completado()
         elif eleccion == 5:
             break
         else:
